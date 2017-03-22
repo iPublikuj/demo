@@ -1,8 +1,7 @@
-Nette Sandbox
-=============
+iPub:demo! sandbox
+==================
 
-This is a simple pre-packaged and pre-configured application using the [Nette](https://nette.org)
-that you can use as the starting point for your new applications.
+This is a simple pre-packaged and pre-configured application using the [Nette](https://nette.org) as core framework and iPublikuj extensions that you can use as the starting point for your new applications.
 
 [Nette](https://nette.org) is a popular tool for PHP web development.
 It is designed to be the most usable and friendliest as possible. It focuses
@@ -15,7 +14,7 @@ Installation
 The best way to install Web Project is using Composer. If you don't have Composer yet,
 download it following [the instructions](https://doc.nette.org/composer). Then use command:
 
-	composer create-project nette/sandbox path/to/install
+	composer create-project ipub/demo path/to/install
 	cd path/to/install
 
 
@@ -41,7 +40,7 @@ via a web browser. See [security warning](https://nette.org/security-warning).
 Requirements
 ------------
 
-PHP 5.6 or higher. To check whether server configuration meets the minimum requirements for
+PHP 7.0 or higher. To check whether server configuration meets the minimum requirements for
 Nette Framework browse to the directory `/checker` in your project root (i.e. `http://localhost:8000/checker`).
 
 
