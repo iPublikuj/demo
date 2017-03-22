@@ -1,0 +1,34 @@
+.messages {
+	height: 350px;
+	padding: 0px;
+	overflow-y: scroll; overflow-x: auto;
+}
+.messages .comment {
+	box-sizing: border-box;
+	float: left;
+	padding: 10px 30px;
+	width: 100%;
+	margin: 0px;
+	border: 0px none;
+}
+.messages .comment h2 {
+	color: #2b2b2b;
+	float: left;
+	font-size: 14px;
+	line-height: 18px;
+	margin: 5px 2% 0 0;
+	width: 18%;
+}
+.messages .comment h2 time {
+	color: #a6a6a6;
+	font-size: 11px;
+	font-style: italic;
+	font-weight: 300;
+}
+.messages .comment p {
+	float: right;
+	font-size: 14px;
+	line-height: 28px;
+	margin: 0;
+	width: 78%;
+}

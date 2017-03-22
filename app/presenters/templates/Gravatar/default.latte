@@ -1,0 +1,76 @@
+{block content}
+	<div class="uk-grid" data-uk-grid-margin>
+		<div class="uk-width-medium-3-4">
+
+			<article class="uk-article">
+
+				<h1 class="uk-article-title">
+					<a n:href="this">ipub:Gravatar!</a>
+				</h1>
+
+				<p class="uk-article-meta">Written by Doe John on 12 April 2013. Posted in <a href="#">Extensions demo</a></p>
+
+				<p>
+					<a href="#"><img width="900" height="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOTAwcHgiIGhlaWdodD0iMzAwcHgiIHZpZXdCb3g9IjAgMCA5MDAgMzAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA5MDAgMzAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSI5MDAiIGhlaWdodD0iMzAwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0zNzguMTg0LDkzLjV2MTEzaDE0My42MzN2LTExM0gzNzguMTg0eiBNNTEwLjI0NCwxOTQuMjQ3SDM5MC40Mzd2LTg4LjQ5NGgxMTkuODA4TDUxMC4yNDQsMTk0LjI0Nw0KCQlMNTEwLjI0NCwxOTQuMjQ3eiIvPg0KCTxwb2x5Z29uIGZpbGw9IiNEOEQ4RDgiIHBvaW50cz0iMzk2Ljg4MSwxODQuNzE3IDQyMS41NzIsMTU4Ljc2NCA0MzAuODI0LDE2Mi43NjggNDYwLjAxNSwxMzEuNjg4IDQ3MS41MDUsMTQ1LjQzNCANCgkJNDc2LjY4OSwxNDIuMzAzIDUwNC43NDYsMTg0LjcxNyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iNDI1LjQwNSIgY3k9IjEyOC4yNTciIHI9IjEwLjc4NyIvPg0KPC9nPg0KPC9zdmc+DQo=" alt=""></a>
+				</p>
+
+				<h2>N:macro</h2>
+
+				<p>You can use n:macro <strong>n:gravatar</strong> and this macro will automatically create SRC or HREF parameter of attribute, it depends on the attribute type.</p>
+
+				<pre><code>&lt;img n:gravatar="'john@doe.com', 100" /&gt;</code></pre>
+
+				<pre><code>&lt;div class="uk-panel uk-panel-box uk-text-center"&gt;
+	&lt;img n:gravatar="'john@doe.com', 120" class="uk-border-circle" width="120" height="120" alt="Avatar" /&gt;
+
+	&lt;h3&gt;John Doe&lt;/h3&gt;
+
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+				<h2>Latte macro</h2>
+
+				<p>If you need to create just only link for gravatar image, you can use classic latte macro <strong>{l}gravatar{r}</strong></p>
+
+				<pre><code>{l}gravatar 'john@doe.com', 120{r}</code></pre>
+
+				<pre><code>&lt;div class="uk-panel uk-panel-box uk-text-center"&gt;
+	&lt;img src="{l}gravatar 'john@doe.com', 120{r}" class="uk-border-circle" width="120" height="120" alt="Avatar" /&gt;
+
+	&lt;h3&gt;John Doe&lt;/h3&gt;
+
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+			</article>
+		</div>
+		<div class="uk-width-medium-1-4">
+			<div class="uk-panel uk-panel-box uk-text-center">
+				<img class="uk-border-circle" width="120" height="120" src="{gravatar 'john@doe.com', 120}" alt="">
+				<h3>John Doe</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut.</p>
+			</div>
+
+			<div class="uk-panel">
+				<h3 class="uk-panel-title">Archives</h3>
+				<ul class="uk-list uk-list-line">
+					<li><a href="#">January 2014</a></li>
+					<li><a href="#">December 2013</a></li>
+					<li><a href="#">November 2013</a></li>
+					<li><a href="#">October 2013</a></li>
+					<li><a href="#">September 2013</a></li>
+				</ul>
+			</div>
+
+			<div class="uk-panel">
+				<h3 class="uk-panel-title">Social Links</h3>
+				<ul class="uk-list">
+					<li><i class="uk-icon-hover uk-icon-justify uk-icon-github"></i> <a href="https://github.com/iPublikuj">GitHub</a></li>
+					<li><i class="uk-icon-hover uk-icon-justify uk-icon-bitbucket"></i> <a href="https://bitbucket.com/ipub">Bitbucket</a></li>
+					<li><i class="uk-icon-hover uk-icon-justify uk-icon-twitter"></i> <a href="https://twitter.com/iPublikuj">Twitter</a></li>
+					<li><i class="uk-icon-hover uk-icon-justify uk-icon-facebook"></i> <a href="https://facebook.com/iPublikuj">Facebook</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+{/block}

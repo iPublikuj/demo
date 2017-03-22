@@ -1,0 +1,36 @@
+#
+# WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+# https://nette.org/security-warning
+#
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+session:
+	expiration: 14 days
+
+services:
+	router: App\Router\RouterFactory::createRouter
+
+	- App\Events\WebSocketsClientDisconnectHandler
+
+extensions:
+	console: Kdyby\Console\DI\ConsoleExtension
+
+	gravatar: IPub\Gravatar\DI\GravatarExtension
+	webSockets: IPub\WebSockets\DI\WebSocketsExtension
+	webSocketsWAMP: IPub\WebSocketsWAMP\DI\WebSocketsWAMPExtension
+	webSocketsZMQ: IPub\WebSocketsZMQ\DI\WebSocketsZMQExtension
+
+console:
+	url: https://demo.ipublikuj.eu
+
+# WebSockets server
+webSockets:
+	server:
+		port: 8443
+	routes:
+		'/demo-chat/<room>' : 'DemoChat:'
+	mapping:
+		*: App\Controllers\*Controller

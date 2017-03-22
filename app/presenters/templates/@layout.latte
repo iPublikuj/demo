@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{ifset title}{include title|stripHtml} | {/ifset}iPub:demo!</title>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.2/css/uikit.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.2/css/uikit.gradient.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.2/css/components/tooltip.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.2/css/components/notify.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	{block head}{/block}
+</head>
+
+<body>
+
+<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+
+	<nav class="uk-navbar uk-margin-large-bottom">
+		<a n:href="Homepage:" class="uk-navbar-brand uk-hidden-small">iPub:demo!</a>
+		<ul class="uk-navbar-nav uk-hidden-small">
+			<li>
+				<a n:href="Homepage:">Home</a>
+			</li>
+			<li>
+				<a n:href="Websockets:">Websockets</a>
+			</li>
+		</ul>
+		<a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+		<div class="uk-navbar-brand uk-navbar-center uk-visible-small">iPub:demo!</div>
+	</nav>
+
+	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+
+	{include content}
+
+	{block #scripts}
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+		<script src="/components/js-cookie/src/js.cookie.js"></script>
+		<script src="/components/nette.ajax.js/nette.ajax.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.2/js/uikit.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.2/js/components/sticky.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.2/js/components/tooltip.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.2/js/components/notify.min.js"></script>
+
+		<script language="javascript" type="text/javascript">
+			{block #javaScript}
+			<!--
+			jQuery(document).ready(function($){
+				// Init nette js
+				$.nette.init();
+			});
+			-->
+			{/block}
+		</script>
+	{/block}
+</div>
+
+</body>
+</html>
